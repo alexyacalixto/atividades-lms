@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 5px;
+    background-image: url("gradiente_bg.png");
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    
+}
+
+
+h1{
+    text-decoration: overline underline;
+}
+
+header h1{
+    font-size: 4.8rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.minhaclasse{
+    width: 37vw;
+    text-align:center;
+    font-size:20px;
+    color:black;
+}
+
+hr{
+    border: 1px black solid;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(85, 5, 85);
+}
+
+.minhaclasse a:hover{
+    color:rgb(12, 141, 113);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.meuartigo1{
+    border: 5px;
+    border-style: solid;
+    border-color: rgba(12, 141, 113, 0.781);
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(85, 5, 85, 0.116);
+    width: 700px; 
+    box-shadow:7px 7px 5px rgba(12, 141, 113, 0.781);
+}
+.meuartigo2{
+    border: 0.1cm dashed rgba(21, 46, 41, 0.781);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(85, 5, 85, 0.116);
+    width: 700px; 
+    box-shadow:7px 7px 5px rgba(12, 141, 113, 0.781);
+}
+.meuartigo3{
+    border: 5px double rgba(0, 0, 0, 0.781) ;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: rgba(85, 5, 85, 0.116);
+    width: 700px; 
+    box-shadow:7px 7px 5px rgba(12, 141, 113, 0.781);
+}
+
+article section h3{
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+ul li{
+    list-style-type: none;
+    text-align: left;
+}
+
+svg circle{
+    fill: none;
+    stroke:black;
+    stroke-width:1px;
+}
+
+svg line{
+    stroke:black;
+    stroke-width: 1px;
+}
+
+#cadastro h1{
+    color: rgba(12, 141, 113, 0.781);
+}
