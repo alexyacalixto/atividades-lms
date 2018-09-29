@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav-superior{
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    background-color: firebrick;
+    box-shadow: 3px 3px 3px rgb(83, 15, 15)
+}
+
+
+
+.dropdown{
+    float: left;
+    
+}
+
+.dropdown-button{
+    padding: 12px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 300ms;
+}
+
+.dropdown-content{
+    position: absolute;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 300ms;
+}
+
+.dropdown:hover .dropdown-content{
+    max-height: 300px;
+    background-color: rgb(116, 22, 22);
+    width: 200px;
+    box-shadow: 3px 3px 3px rgb(83, 15, 15);
+    z-index:100;
+}
+
+.dropdown-button:hover{
+    background-color: rgb(116, 22, 22);
+    box-shadow: 3px 3px 3px rgb(83, 15, 15);
+}
+
+.dropdown-content ul li a:hover{
+    background-color: firebrick;
+    box-shadow: 3px 3px 3px rgb(83, 15, 15)
+}
+
+.dropdown-content ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: background-color 300ms, color 300ms;
+}
+
+#texto-lateral{
+    width: 13%;
+    position: fixed;
+    height: 500px;
+    background: linear-gradient(firebrick, rgb(0, 0, 0));
+    color:white;
+    text-align: center; 
+    margin-top: 80px;
+    margin-right: 20px;
+    right: 0%;
+    box-shadow: 3px 3px 3px rgb(83, 15, 15);
+    z-index: 50;
+}
+
+
+#texto-lateral p{
+    padding-top:80px; 
+}
+
+.nav-lateral{
+    position: absolute;
+    float: left;
+    width: 12%;
+    top: 80px;
+    left: 20px;
+    box-shadow: 3px 3px 3px rgb(83, 15, 15);
+}
+
+.nav-lateral ul li{
+    list-style-type: none;
+    background-color: firebrick;
+    text-align: center;
+}
+
+.nav-lateral ul li a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+    display: block;
+    padding: 5px;
+}
+
+.nav-lateral ul li a:hover{
+    background-color:rgb(116, 22, 22);
+    box-shadow: 3px 3px 3px rgb(83, 15, 15);
+}
+
+.conteudo{
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 80px;
+    left:20%;  
+}
+
+.conteudo img{
+    width: 50px;
+    height: 50px;
+    animation-name: imagem;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes imagem {
+    0%{transform: translate(0px, 0px) rotateY(0deg)}
+    25%{transform: translate(200px, 450px) rotateY(90deg)}
+    50%{transform: translate(600px, 250px) rotateY(180deg)}
+    75%{transform: translate(350px, 0px) rotateY(270deg)}
+    100%{transform: translate(0px, 0px) rotateY(360deg)}
+
+}
+
+@media screen and (max-width:600px){
+    #texto-lateral{
+        width: 90%;
+        position: fixed;
+        height: 15%;
+        background: linear-gradient(firebrick, rgb(0, 0, 0));
+        color:white;
+        text-align: center; 
+        bottom: 0%;
+        box-shadow: 3px 3px 3px rgb(83, 15, 15);
+        z-index: 100;
+    }
+
+    #texto-lateral p{
+        padding-top:15px;
+        font-size: 13px;
+    }
+
+    .nav-lateral{
+        width: 85%;
+        left: 7%;
+        position: absolute;
+        float: left;
+        top: 50px;
+        box-shadow: 3px 3px 3px rgb(83, 15, 15);
+    }
+
+    .conteudo{
+        width: 83%;
+        height: 54%;
+        position: fixed;
+        overflow:auto;        
+        top:30%;
+        left: 10%;
+                
+    }
+
+    .conteudo img{
+        width: 50px;
+        height: 50px;
+        animation-name: imagem;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes imagem {
+        0%{transform: translate(0px, 0px) rotateY(0deg)}
+        25%{transform: translate(200px, 240px) rotateY(90deg)}
+        50%{transform: translate(400px, 100px) rotateY(180deg)}
+        75%{transform: translate(200px, 0px) rotateY(270deg)}
+        100%{transform: translate(0px, 0px) rotateY(360deg)}
+
+    }
+
+}
