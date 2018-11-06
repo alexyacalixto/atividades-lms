@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabalho 2</title>
+    <link rel="stylesheet" href="trabalho2.css">
+</head>
+<body>
+
+    <div class="conteudo">
+        <div class="header">
+            <span class="titulo">Whatsapp</span>
+            <button class="entrar">Entrar</button>
+            
+        </div>
+        <div class="grupos">
+            
+        </div>
+        <div class="mensagens">
+           
+        </div>
+    </div>
+    
+    <script>
+        let header = document.querySelector(".header");
+        let grupos = document.querySelector(".grupos");
+        let mensagens = document.querySelector(".mensagens");
+        let msgs = [
+            {
+                grupo: "Grupo da família",
+                mensagens:[
+                    {
+                        usuario: "joao1",
+                        texto: "Tudo bem?"
+                    },
+                    {
+                        usuario: "victor2",
+                        texto: "Tudo tranqs"
+                    },
+                    {
+                        usuario: "joao3",
+                        texto: "Que bom"
+                    },
+                ]
+            },
+            {
+                grupo: "Grupo dos amigos",
+                mensagens:[
+                    {
+                        usuario: "maria4",
+                        texto: "Na paz?"
+                    },
+                    {
+                        usuario: "victor5",
+                        texto: "Show"
+                    },
+                    {
+                        usuario: "maria6",
+                        texto: "Que bom"
+                    },
+                ]
+                
+            },
+            {
+                grupo: "Grupo da universidade",
+                mensagens:[
+                    {
+                        usuario: "victor7",
+                        texto: "Bom?"
+                    },
+                    {
+                        usuario: "robson8",
+                        texto: "Bom"
+                    },
+                    {
+                        usuario: "victor9",
+                        texto: "Que bom!!"
+                    },
+                ]
+            }
+
+        ]
+
+        
+
+
+        function add_grupo(texto, url, classe){
+            let novo_li = document.createElement("li");
+            let texto_li = document.createTextNode(texto);
+            let img = document.createElement("img");
+            img.src= url;
+
+            novo_li.appendChild(texto_li);
+            novo_li.appendChild(img);
+            novo_li.classList.add(classe)
+            grupos.appendChild(novo_li);
+        }
+
+        function escolher_grupo(){
+            
+            for(let i = 0; i<msgs.length; i++){
+                add_grupo(msgs[i].grupo, "perfil.png", "indice"+i);
+            }
+            
+        }
+
+        
+        function add_msg(usuario_novo, msg_nova){
+            let usuario = document.createElement("div");
+            usuario.classList.add("usuario");
+            let msg = document.createElement("div");
+            msg.classList.add("msg");
+            let nome_usuario = document.createTextNode(usuario_novo);
+            let texto_msg = document.createTextNode(msg_nova);
+
+            usuario.appendChild(nome_usuario);
+            msg.appendChild(texto_msg);
+
+            let msg_grupo = document.createElement("div");
+            msg_grupo.classList.add("msg-grupo");
+
+            msg_grupo.appendChild(usuario);
+            msg_grupo.appendChild(msg);
+
+            mensagens.appendChild(msg_grupo);
+        }
+       
+       function add_all_msg(indice){
+            for(let i = 0; i<msgs.length; i++){
+                add_msg(msgs[indice].mensagens[i].usuario, msgs[indice].mensagens[i].texto);
+
+            }
+       }
+        
+        let nome_grupo = document.createElement("span");
+        nome_grupo.classList.add("nome-grupo");
+        
+        function nome_do_grupo(nome){
+            let texto_grupo = document.createTextNode(nome);
+            nome_grupo.appendChild(texto_grupo);
+            header.appendChild(nome_grupo);
+        }
+        
+
+
+        escolher_grupo();
+        
+
+        let li1 = document.querySelector(".indice0");
+        li1.addEventListener("click", function(){
+            mensagens.innerHTML="";
+            add_all_msg(0);
+            nome_grupo.innerHTML="";
+            nome_do_grupo(msgs[0].grupo);
+        })
+
+        let li2 = document.querySelector(".indice1");
+        li2.addEventListener("click", function(){
+            mensagens.innerHTML="";
+            add_all_msg(1);
+            nome_grupo.innerHTML="";
+            nome_do_grupo(msgs[1].grupo);
+        })
+
+        let li3 = document.querySelector(".indice2");
+        li3.addEventListener("click", function(){
+            mensagens.innerHTML="";
+            add_all_msg(2);
+            nome_grupo.innerHTML="";
+            nome_do_grupo(msgs[2].grupo);
+        })
+
+
+    </script>
+
+</body>
+</html>

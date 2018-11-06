@@ -8,26 +8,39 @@
     height: 100vh;
     text-align: center;
     color:white;
+    
+}
+
+.trabalhos{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 
-ul{
+li{
     list-style-type: none;
     font-size: 20px;
+    
 }
 
 a{
     text-decoration: none;
     color: white;
-    transition: color 0.3s;
+    transition: color 200ms;
     font-family: monospace;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 2px black solid;
+    border-radius: 20px;
+    
 }
 
 a:hover{
-    color:rgb(5, 99, 68);
+    background: linear-gradient(gray,rgb(168, 93, 104));
 }
 
-.trabalho{
-    letter-spacing: 4px;
-    font-size: 22px;
-}

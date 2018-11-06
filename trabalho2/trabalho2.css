@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0; 
+}
+
+.conteudo{
+    width: 900px;
+    margin: auto;
+    margin-top:50px;
+    position: relative;
+}
+
+.header{
+    height: 60px;
+    background-color: rgb(78, 1, 12);
+    color:white;
+    box-shadow: 4px 4px 3px black;
+    z-index: 500;
+}
+
+.titulo{
+    float: left;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    left: 15px;
+}
+.entrar{
+    float: right;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-0%, -50%);
+    right: 15px;
+}
+
+.nome-grupo{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    
+}
+
+
+
+.grupos{
+    float: left;
+    left:0;
+    width: 25%;
+    height: 450px;
+    background-color: brown;
+    box-shadow: 4px 4px 3px black;
+    position: absolute;
+    z-index: -100;
+}
+
+.grupos li{
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    color: white;
+}
+
+.grupos li:hover{
+    background-color: rgb(163, 75, 75);
+}
+
+.grupos li img{
+    height: 20px;
+    border-radius: 50px;
+    float: left;
+}
+
+.mensagens{
+    position: absolute;
+    float: right;
+    right: 0;
+    width: 75%;
+    height: 450px;  
+    background-color: rgb(163, 75, 75);
+    box-shadow: 4px 4px 3px black;  
+    z-index: -200;  
+}
+
+.msg-grupo{
+    padding-left:20px; 
+    padding-top: 20px;
+}
+
+.mensagens .msg-grupo .usuario{
+    display: block;
+    padding: 10px;
+    background-color: rgb(78, 1, 12);
+    color: white;
+    width: 20%;
+    border-radius: 0px 10px 0px  0px;
+}
+
+.mensagens .msg-grupo .msg{
+    display: block;
+    padding: 10px;
+    background-color: white;
+    width: 20%;
+    border-radius: 0px 0px 10px 10px;
+}
+
