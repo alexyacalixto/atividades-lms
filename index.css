@@ -21,13 +21,13 @@
 }
 
 
-li{
+ul li{
     list-style-type: none;
     font-size: 20px;
     
 }
 
-a{
+ul li a{
     text-decoration: none;
     color: white;
     transition: color 200ms;
@@ -40,7 +40,7 @@ a{
     
 }
 
-a:hover{
+ul li a:hover{
     background: linear-gradient(gray,rgb(168, 93, 104));
 }
 
